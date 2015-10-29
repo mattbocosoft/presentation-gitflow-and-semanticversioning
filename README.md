@@ -4,13 +4,11 @@
 Student: **Matthew Thomas**  
 Presentation 3  
 
-# Gitflow Branching Model, Semantic Versioning. 
+# Topics in Configuration Management  
 
 ##Gitflow Branching Model  
 
 ###Usage  
-
-#####Git Extension  
 
 ###Master Branch  
 
@@ -33,5 +31,13 @@ Presentation 3
 ####Source Tree  
 
 ##Semantic Versioning  
+
+###Major  
+
+###Minor  
+
+###Patch  
+
+###Pre-Release  
 
 ##Fastlane.tools  
