@@ -59,6 +59,12 @@ I talked earlier about thinking about releases in terms of "themes" instead of v
 
 ###Strategies for Apple App Store Updates  
 
+###References  
+
+[A successful Git branching model](http://nvie.com/posts/a-successful-git-branching-model/)  
+[A short introduction to Git Flow (Video)](https://vimeo.com/16018419)  
+[Using git-flow to automate your git branching workflow](http://jeffkreeftmeijer.com/2010/why-arent-you-using-git-flow/)  
+
 ##Semantic Versioning  
 
 ![semantic-versioning](images/semantic-versioning.png)  
@@ -70,5 +76,8 @@ I talked earlier about thinking about releases in terms of "themes" instead of v
 ###Patch  
 
 ###Pre-Release  
+
+###References  
+[http://semver.org](http://semver.org)  
 
 ##Fastlane.tools  
