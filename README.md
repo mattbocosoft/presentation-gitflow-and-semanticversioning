@@ -61,6 +61,8 @@ I talked earlier about thinking about releases in terms of "themes" instead of v
 
 ##Semantic Versioning  
 
+![semantic-versioning](images/semantic-versioning.png)  
+
 ###Major  
 
 ###Minor  
