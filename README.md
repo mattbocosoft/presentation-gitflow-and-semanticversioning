@@ -91,7 +91,7 @@ The process for a hotfix is as follows:
 3. One or two commits are created on the new hotfix branch.  
 4. QA tests the commits from builds pointing directly at the hotfix branch.  
 5. Development and testing are complete, so deploy latest hotfix commit.  
-After successful deployment...  
+*After successful deployment...*  
 6. Merge hotfix branch into master branch, and tag commit on master branch with version number.  
 7a. If a release is in progress, merge hotfix into release branch.  
 7b. Else, merge hotfix branch into develop branch.  
@@ -100,7 +100,13 @@ A separate continuous integration job should be created for each release branch 
 
 ###Tagging  
 
-###Strategies for Apple App Store Updates  
+Tagging should be used to identify release versions on the master branch and should use the Semantic Versioning conventions. Tagging can also be used to mark an early-adopter build that was sent to the client from the develop branch or a feature branch.  
+
+If the git repository is using submodules, tagging does not necessarily need to be used on the submodules because the tagged commits the parent repository will by definition point to the correct commits in the submodules.  
+
+###Strategies for App Store Updates  
+
+Both the Apple App Store and Google Play stores now use a review process to vet app updates for security concerns, UI/UX convention violations, and stability. It is recommended not to merge from release or hotfix into the master branch until the release or hotfix is approved. However, in order to keep the develop branch up-to-date meanwhile the release is going through the review process, the release or hotfix branch can be merged back into develop even before the review takes place. That way, the repository will also contain a record of how many times a given release or hotfix was submitted for review before it was approved.  
 
 ###References  
 
