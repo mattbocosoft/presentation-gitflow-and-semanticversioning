@@ -80,7 +80,7 @@ A separate continuous integration job should be created for each release branch 
 ###Hotfix Branches  
 
 *May branch off from: master*  
-*Must merge back into: master*  
+*Must merge back into: master and (release or develop)*  
 *Branch naming convention: hotfix/X.Y.Z*  
 
 I talked earlier about thinking about releases in terms of "themes" instead of versions. Hotfixes are one reason why this might be important. Hotfixes are unplanned and urgent changes that do not fit into the scheduled release plan, therefore they would disrupt and offset any planned versions. An obvious resolution for this would be to add a hotfix component to the version number; i.e. Major.Minor.Patch.*Hotfix* however this would break from the Semantic Versioning standard practices.  
