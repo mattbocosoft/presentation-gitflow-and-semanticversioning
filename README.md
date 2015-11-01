@@ -118,6 +118,14 @@ Both the Apple App Store and Google Play stores now use a review process to vet 
 
 ![semantic-versioning](images/semantic-versioning.png)  
 
+Semantic Versioning is an attempt to, as it's name suggests, standardize the *meaning* as well as syntax of version numbers. The [main webpage of the Semantic Versioning project](http://semver.org) declares that the goal of the project is to deal with 'dependency hell'. Indeed, Semantic Versioning is a very popular versioning convention adopted by [CocoaPods](https://github.com/mattbocosoft/presentation-cocoapods).  
+
+[Not everyone agrees](https://gist.github.com/jashkenas/cbd2b088e20279ae2c8e) with the practice of Semantic Versioning, arguing that Semantic Versioning "prioritize[s] a mechanistic understanding of a codebase over a human one".  
+
+There are many unique methods of assigning versions to product releases, and each organization has it's own unique style. For OS X, Apple uses a two-component version number (e.g. 10.11) combined with a natural language name (e.g. "El Capitan"). iOS on the other hand uses a system that appears to be equivalent to.
+
+Cocoapods...
+
 ###Major  
 
 ###Minor  
