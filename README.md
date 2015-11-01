@@ -41,17 +41,33 @@ If you prefer to use a Graphical User-Interface (GUI), then [SourceTree](https:/
 
 ###Master Branch  
 
+After a release is deployed from either a release branch or a hotfix branch, the last commit should be merged into the master branch. Developers should never make direct commits on the master branch, rather each commit should result only from the merged from either a release or hotfix branch. After the merge, the merge-commit on the master branch is tagged with the version number using Semantic Versioning (see below).  
+
+The master branch is a great way to be able to track and visualize the release history of a product in a single branch. The master branch also makes it easy to checkout the version of the code for a specific release.  
+
 ###Develop Branch  
 
 In other branching models, this would be equivalent to 'trunk'.
 
 ###Feature Branches  
 
+*May branch off from: develop*  
+*Must merge back into: develop*  
+*Branch naming convention: feature/**  
+
 ###Release Branches  
+
+*May branch off from: develop*  
+*Must merge back into: develop and master*  
+*Branch naming convention: release/X.Y.Z*  
 
 Gitflow works best on an Agile team where releases and versioning are flexible and value is placed on "responding to change over following a plan". In Gitflow, releases are not assigned a version (e.g. X.Y.Z) until code-complete. This flows well with teams who think about a release in terms of the new features or bug fixes that the release comprised of, rather than teams that commonly talk about releases more abstractly by their version. As [Kent Beck](https://en.wikipedia.org/wiki/Kent_Beck) creator of Extreme Programming (XP) recommends, Agile teams should think about releases in terms of "themes", functionality for each release that has been specified at a high level. This also encourages all product members, not just developers, to be more aware of the current features in development. It's easy to get out-of-touch with a product, its features, and the value being delivered to users when the team depends too heavily on version numbers. Additionally, when version numbers change, like in the case of hot-fixes, a team that depends on version numbers will have to scramble to readjust their release plan whereas a team using release themes will not be affected.  
 
 ###Hot-fix Branches  
+
+*May branch off from: master*  
+*Must merge back into: master*  
+*Branch naming convention: hotfix/X.Y.Z*  
 
 I talked earlier about thinking about releases in terms of "themes" instead of versions. Hot-fixes are one reason why this might be important.
 
