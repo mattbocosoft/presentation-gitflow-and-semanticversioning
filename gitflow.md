@@ -1,4 +1,4 @@
-##Gitflow Branching Model  
+#Gitflow Branching Model  
 
 ![git-flow-extract-bw](images/git-flow-extract-bw.png)  
 
@@ -8,7 +8,7 @@ As the name suggests, Gitflow was created for use with the [Git source control m
 
 Developers who are accustomed to having a Configuration Management team in charge of the repository and branching are likely to find Git and Gitflow daunting, in part because branching is still viewed as a cumbersome and heavy process. Git branches are simply lightweight movable pointers in the repository, and they are quick to create and quick to be destroyed with no lasting consequences on the code-base. If a developer thinks that Gitflow is thus too complicated and overkill for a project, it's likely they need more exposure to Git and Gitflow documentation.  
 
-###Tools  
+##Tools  
 
 As with Git, Gitflow can be implemented entirely from the command-line or via a user-interface. Here are two of the tools to bootstrap your Gitflow process.  
 
@@ -24,7 +24,7 @@ If you prefer to use a Graphical User-Interface (GUI), then [SourceTree](https:/
 
 ![sourcetree-gitflow](images/sourcetree-gitflow.png)  
 
-###Usage  
+##Usage  
 
 The branches below describe the standard practices and naming conventions, although branches may be given different names if it's more clear for a team. For example, a team might call the develop branch 'trunk', or the master branch 'app-store'. Both the master and develop branches are permanent branches in the repository, while the supporting branches, features, releases, and hotfixes, are temporary branches that come and go according to need. All branches and their names do not carry any special meaning other than *how* we use them; Gitflow branches are all equal lightweight pointers.  
 
@@ -34,19 +34,19 @@ Make sure to turn off fast-forward merging in your repository settings or specif
 
 ![gitflow-fast-forward-merge](images/gitflow-fast-forward-merge.png)  
 
-###Master Branch  
+##Master Branch  
 
 After a release is deployed from either a release branch or a hotfix branch, the last commit should be merged into the master branch. Developers should never make direct commits on the master branch, rather each commit should result only from the merged from either a release or hotfix branch. After the merge, the merge-commit on the master branch is tagged with the version number using Semantic Versioning (see below).  
 
 The master branch is a great way to be able to track and visualize the release history of a product in a single branch. The master branch also makes it easy to checkout the version of the code for a specific release.  
 
-###Develop Branch  
+##Develop Branch  
 
 In other branching models, this branch would be called the ['trunk'](https://en.wikipedia.org/wiki/Trunk_(software)), or 'main'. This is where the 'churn' happens, and contains the most up-to-date, though unstable, version of the code.  
 
 A continuous integration job should be created to point to this branch, and should be built either with each commit or with a short time-interval such that QA can also have access to the latest build on this branch.
 
-###Feature Branches  
+##Feature Branches  
 
 *May branch off from: develop*  
 *Must merge back into: develop*  
@@ -60,7 +60,7 @@ A powerful benefit of keeping feature development on separate branches, is the a
 
 If the branch is long-running, then a continuous integration job can be created to point to the feature branch so that QA can proactively work with developers to solidify the feature before merging into develop. Once a feature branch is merged back into the develop branch, it should be deleted.  
 
-###Release Branches  
+##Release Branches  
 
 *May branch off from: develop*  
 *Must merge back into: develop and master*  
@@ -70,7 +70,7 @@ Gitflow works best on an Agile team where releases and versioning are flexible a
 
 A separate continuous integration job should be created for each release branch so that QA can test changes made before deployment. Once a release branch is merged back into the develop branch and the master branch, the release branch should be deleted. As usual, this will not delete the commits that made up the release branch, but rather only the lightweight pointer that pointed to the head of the release branch, which is no longer needed since no more changes should be committed to the release branch.  
 
-###Hotfix Branches  
+##Hotfix Branches  
 
 *May branch off from: master*  
 *Must merge back into: master and (release or develop)*  
@@ -91,15 +91,15 @@ The process for a hotfix is as follows:
 
 A separate continuous integration job should be created for each release branch so that QA can test changes made before deployment. Just like with feature and release branches, once a hotfix branch is merged back into master and developer (or release), the hotfix branch should be deleted.  
 
-###Tagging  
+##Tagging  
 
 Tagging should be used to identify release versions on the master branch and should use the Semantic Versioning conventions. Tagging can also be used to mark an early-adopter build that was sent to the client from the develop branch or a feature branch.  
 
-###Strategies for App Store Updates  
+##Strategies for App Store Updates  
 
 Both the Apple App Store and Google Play stores now use a review process to vet app updates for security concerns, UI/UX convention violations, and stability. It is recommended not to merge from release or hotfix into the master branch until the release or hotfix is approved. However, in order to keep the develop branch up-to-date meanwhile the release is going through the review process, the release or hotfix branch can be merged back into develop even before the review takes place. That way, the repository will also contain a record of how many times a given release or hotfix was submitted for review before it was approved.  
 
-###Strategies for Git Submodules
+##Strategies for Git Submodules
 
 There is no official stance on the use of [Git submodules](https://git-scm.com/docs/git-submodule) and how to apply Gitflow to Git Submodules. For a Git submodule that is only consumed, it is straight-forward to point a feature branch or develop branch to the latest version of the Git submodule, and have that pointer cascade to the releases. However if a Git Submodule is being both consumed and produced, then branching becomes trickier. From my own experience, here are my recommendations:  
 1. Don't use a master branch unless the git submodule is a versioned library consumed by other products.  
@@ -108,8 +108,7 @@ There is no official stance on the use of [Git submodules](https://git-scm.com/d
 4. Otherwise, branching in Git submodules should mirror branching in the parent repository with one exception. Branches should be prefixed with the name of the product that created the branch. E.g. MyApp/featureX branches from develop  
 5. Share the develop branch between products, so there is no need to keep multiple develop branches in sync. Otherwise you run the risk of ending up with two versions of the same library within a single repository.  
 
-
-###References  
+##References  
 
 [A successful Git branching model](http://nvie.com/posts/a-successful-git-branching-model/)  
 [A short introduction to Git Flow (Video)](https://vimeo.com/16018419)  
