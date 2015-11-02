@@ -1,4 +1,4 @@
-##Semantic Versioning  
+#Semantic Versioning  
 
 ![semantic-versioning](images/semantic-versioning.png)  
 
@@ -11,29 +11,29 @@ There are many unique methods of assigning versions to product releases, and eac
 2. iOS uses a three-component version number much like Semantic Versioning, and may in fact be *using* Semantic Versioning    
 3. Android uses [three different versions](https://en.wikipedia.org/wiki/Android_version_history) for each release, e.g. 4.4–4.4.4 Android KitKat (API level 19)  
 
-###Beginning Development  
+##Initial Development  
 
 The initial version of a product or library using Semantic Versioning starts at 0.1.0. Since all changes are potentially break backwards-compatibility, it does make sense to increase the major version until release, so the product does not increase to 1.0.0 until the first public release. If the software is already in use, then the version number should already be at or above 1.0.0  
 
-###Major  
+##Major  
 The Major number should be incremented when backward-*incompatible* functionality is introduced in the release. This indicates to the consumers of the software or library that they need to be prepared to change their integration methods with the software or library.  
 
 The release that corresponds to an increment in the major version may also include changes that are minor or patch level.  
 
 The Minor and Patch numbers must be reset to 0 when the Minor number is incremented.  
 
-###Minor  
+##Minor  
 The Minor number should be incremented when new backwards-compatible functionality is introduced in the release. This indicates to consumers of the software or library that they can safely upgrade to the latest Minor release without having to worry about backwards-compatibility issues.  
 
 The release that corresponds to an increment in the minor version may also include changes that are patch level, but not major level.  
 
 The Patch number must be reset to 0 when the Minor number is incremented.  
 
-###Patch  
+##Patch  
 The Patch number should be incremented when backwards-compatible bug-fixes is introduced in the release. This indicates to consumers of the software or library that they can safely upgrade to the latest Patch release without having to worry about backwards-compatibility issues.  
 
-###Pre-Release  
+##Pre-Release  
 Pre-release numbers are appended after the Patch number following a dash. They can include any number of components separated by a dot. An example of a version with a pre-release number is 1.4.2-beta.2  
 
-###References  
+##References  
 [http://semver.org](http://semver.org)  
