@@ -6,7 +6,7 @@ Presentation 3
 
 # Topics in Software Configuration Management  
 
-Configuration Management is an important part of Software Engineering, and consists of many topics including source code management, build management, versioning and release management. This presentation will cover tools that help in these processes, and how they can applied in the context of mobile development.
+Configuration Management is an important part of Software Engineering, and consists of many topics including source code management, build management, versioning and release management. This presentation will cover tools that support these processes. The tools can be used in the context of any type of development, however examples will emphasize Agile *mobile* software development.  
 
 Source code management  
 Build engineering  
