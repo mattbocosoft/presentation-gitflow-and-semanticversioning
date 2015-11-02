@@ -8,15 +8,14 @@ Presentation 3
 
 Configuration Management is an important part of Software Engineering, and consists of many topics including source code management, build management, versioning and release management. This presentation will cover tools that support these processes. The tools can be used in the context of any type of development, however examples will emphasize Agile software development for mobile devices.  
 
-Source code management  
-Build engineering  
-Environment configurations  
-Change control  
-Release engineering  
-Deployment  
+###[Gitflow Branching Model](gitflow.md)  
 
-[Gitflow Branching Model](gitflow.md)  
+The Gitflow branching model supports many aspects of Software Configuration Management including Source Code Management, Change control, Release engineering and Deployment.  
 
-[Semantic Versioning](semantic-versioning.md)  
+###[Semantic Versioning](semantic-versioning.md)  
 
-##Fastlane.tools  
+Semantic Versioning supports Change control, Release engineering (specifically the Identifiability aspect), and Deployment among other facets of Software Configuration Management.  
+
+Other Ideas:  
+Fastlane.tools  
+Jenkins
