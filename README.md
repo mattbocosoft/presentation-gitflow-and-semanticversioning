@@ -41,7 +41,13 @@ If you prefer to use a Graphical User-Interface (GUI), then [SourceTree](https:/
 
 ###Usage  
 
-The branches below describe the standard practices and naming conventions, although branches may be given different names if it's more clear for a team. For example, a team might call the develop branch 'trunk', or the master branch 'app-store'.  
+The branches below describe the standard practices and naming conventions, although branches may be given different names if it's more clear for a team. For example, a team might call the develop branch 'trunk', or the master branch 'app-store'. Both the master and develop branches are permanent branches in the repository, while the supporting branches, features, releases, and hotfixes, are temporary branches that come and go according to need. All branches and their names do not carry any special meaning other than *how* we use them; Gitflow branches are all equal lightweight pointers.  
+
+Gitflow lays out specific rules surrounding when and how each of the supporting branches can be created, merged, and destroyed.  
+
+Make sure to turn off fast-forward merging in your repository settings or specify the --no-ff flag each time you merge a branch. This setting ensures that a merge-commit is always created. This is useful for example when a supporting branch, like a feature, is created and merged back into develop before any commits occur on develop. With fast-forwarding, the develop HEAD pointer would simply move to where the feature is pointing, thereby loosing the record of any existance of a feature branch. The feature commits would still be seen, but it would appear as if they happened directly on the develop branch. Below is a diagram from Driessen's blog post:  
+
+![gitflow-fast-forward-merge](images/gitflow-fast-forward-merge.png)  
 
 ###Master Branch  
 
@@ -67,7 +73,7 @@ After a feature is branched from develop and meanwhile a feature is being develo
 
 A powerful benefit of keeping feature development on separate branches, is the ability to elevate the Agile value of flexibility over following a plan. When a release branch is created, only those features that have been merged into develop will be included into the release. That way, there will not be any unfinished feature work holding up the release. The develop branch will always be ready for a release branch to be created.  
 
-If the branch is long-running, then a continuous integration job can be created to point to the feature branch so that QA can proactively work with developers to solidify the feature before merging into develop.  
+If the branch is long-running, then a continuous integration job can be created to point to the feature branch so that QA can proactively work with developers to solidify the feature before merging into develop. Once a feature branch is merged back into the develop branch, it should be deleted.  
 
 ###Release Branches  
 
@@ -77,7 +83,7 @@ If the branch is long-running, then a continuous integration job can be created 
 
 Gitflow works best on an Agile team where releases and versioning are flexible and value is placed on "responding to change over following a plan". In Gitflow, releases are not assigned a version (e.g. X.Y.Z) until code-complete. This flows well with teams who think about a release in terms of the new features or bug fixes that the release comprised of, rather than teams that commonly talk about releases more abstractly by their version. As [Kent Beck](https://en.wikipedia.org/wiki/Kent_Beck) creator of Extreme Programming (XP) recommends, Agile teams should think about releases in terms of "themes", functionality for each release that has been specified at a high level. This also encourages all product members, not just developers, to be more aware of the current features in development. It's easy to get out-of-touch with a product, its features, and the value being delivered to users when the team depends too heavily on version numbers. Additionally, when version numbers change, like in the case of hotfixes, a team that depends on version numbers will have to scramble to readjust their release plan whereas a team using release themes will not be affected.  
 
-A separate continuous integration job should be created for each release branch so that QA can test changes made before deployment.  
+A separate continuous integration job should be created for each release branch so that QA can test changes made before deployment. Once a release branch is merged back into the develop branch and the master branch, the release branch should be deleted. As usual, this will not delete the commits that made up the release branch, but rather only the lightweight pointer that pointed to the head of the release branch, which is no longer needed since no more changes should be committed to the release branch.  
 
 ###Hotfix Branches  
 
@@ -98,7 +104,7 @@ The process for a hotfix is as follows:
 7a. If a release is in progress, merge hotfix into release branch.  
 7b. Else, merge hotfix branch into develop branch.  
 
-A separate continuous integration job should be created for each release branch so that QA can test changes made before deployment.  
+A separate continuous integration job should be created for each release branch so that QA can test changes made before deployment. Just like with feature and release branches, once a hotfix branch is merged back into master and developer (or release), the hotfix branch should be deleted.  
 
 ###Tagging  
 
