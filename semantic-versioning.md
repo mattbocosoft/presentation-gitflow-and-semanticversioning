@@ -10,6 +10,16 @@ There are many unique methods of assigning versions to product releases, and eac
 1. OS X: Apple uses a two-component version number (e.g. 10.11) combined with a natural language name (e.g. "El Capitan").  
 2. iOS uses a three-component version number much like Semantic Versioning, and may in fact be *using* Semantic Versioning    
 3. Android uses [three different versions](https://en.wikipedia.org/wiki/Android_version_history) for each release, e.g. 4.4–4.4.4 Android KitKat (API level 19)  
+4. Some organizations use version numbers based on *when* the version was released. For example, if the product update was released in the 4th financial quarter of 2016, then the version would be 2016.4  
+
+##Internal Versioning
+
+Semantic Versioning is intented to be used for the release version of a product or library. This is the version that the user or consumer of the product sees, and it also often called the marketing version. Internal versions should adopt a different pattern; here is my recommendation based off of my experience and assuming the use of the Gitflow branching model.  
+
+1. Release branches should declare a specific semantic version since they are candidates for release. The version can be incremented if a hotfix is required before the release is deployed. Use a build number suffix to distinguish between commits, for example: X.Y.Z (build-number)  
+2. Hotfix branches are the same as release branches in that they should use a declared semantic version. Use a build number suffix to distinguish between commits, for example: X.Y.Z (build-number)  
+3. Master branches will by nature receive the corrent semantic version from the release or hot-fix that merged into the master branch.  
+4. Develop branch and feature branches should use the name of the branch as the version and a build number to distinguish between commits, for example: branch-name (build number)  
 
 ##Initial Development  
 
