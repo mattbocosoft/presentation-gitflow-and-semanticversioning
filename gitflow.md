@@ -117,3 +117,7 @@ There is no official stance on the use of [Git submodules](https://git-scm.com/d
 [A successful Git branching model](http://nvie.com/posts/a-successful-git-branching-model/)  
 [A short introduction to Git Flow (Video)](https://vimeo.com/16018419)  
 [Using git-flow to automate your git branching workflow](http://jeffkreeftmeijer.com/2010/why-arent-you-using-git-flow/)  
+
+
+**Next Up**: [Semantic Versioning](semantic-versioning.md)  
+...or return to the [homepage](README.md).
