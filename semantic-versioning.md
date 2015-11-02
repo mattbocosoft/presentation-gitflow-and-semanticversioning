@@ -47,3 +47,7 @@ Pre-release numbers are appended after the Patch number following a dash. They c
 
 ##References  
 [http://semver.org](http://semver.org)  
+
+
+**Previous**: [Gitflow Branching Model](gitflow.md)  
+Return to the [homepage](README.md).
