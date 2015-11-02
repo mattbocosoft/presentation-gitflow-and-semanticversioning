@@ -18,6 +18,8 @@ Vincent Driessen also created a set of Git Extensions "to provide high-level rep
 
 You do **not need** to install these extensions in order to implement Gitflow. The extensions are merely short-cuts to help streamline your Gitflow workflow.  
 
+Here is a great [blog post tutorial by Jeff Kreeftmeijer](http://jeffkreeftmeijer.com/2010/why-arent-you-using-git-flow/) that goes over how to get the most out of the GitFlow extensions.  
+
 ####SourceTree  
 
 If you prefer to use a Graphical User-Interface (GUI), then [SourceTree](https://www.sourcetreeapp.com) is a good free option for OS X. It comes with [out-of-the-box support for both Gitflow and Hg Flow](http://blog.sourcetreeapp.com/2012/08/01/smart-branching-with-sourcetree-and-git-flow/).  
