@@ -33,6 +33,8 @@ As with Git, Gitflow can be implemented entirely from the command-line or via a 
 
 Vincent Driessen also created a set of Git Extensions "to provide high-level repository operations" for Gitflow. These extensions can be found as an [open-source project on Github](https://github.com/nvie/gitflow) now supported by over 30 contributors.  
 
+You do **not need** to install these extensions in order to implement Gitflow. The extensions are merely short-cuts to help streamline your Gitflow workflow.  
+
 ####SourceTree  
 
 If you prefer to use a Graphical User-Interface (GUI), then [SourceTree](https://www.sourcetreeapp.com) is a good free option for OS X. It comes with [out-of-the-box support for both Gitflow and Hg Flow](http://blog.sourcetreeapp.com/2012/08/01/smart-branching-with-sourcetree-and-git-flow/).  
