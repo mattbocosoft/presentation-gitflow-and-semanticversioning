@@ -104,11 +104,19 @@ A separate continuous integration job should be created for each release branch 
 
 Tagging should be used to identify release versions on the master branch and should use the Semantic Versioning conventions. Tagging can also be used to mark an early-adopter build that was sent to the client from the develop branch or a feature branch.  
 
-If the git repository is using submodules, tagging does not necessarily need to be used on the submodules because the tagged commits the parent repository will by definition point to the correct commits in the submodules.  
-
 ###Strategies for App Store Updates  
 
 Both the Apple App Store and Google Play stores now use a review process to vet app updates for security concerns, UI/UX convention violations, and stability. It is recommended not to merge from release or hotfix into the master branch until the release or hotfix is approved. However, in order to keep the develop branch up-to-date meanwhile the release is going through the review process, the release or hotfix branch can be merged back into develop even before the review takes place. That way, the repository will also contain a record of how many times a given release or hotfix was submitted for review before it was approved.  
+
+###Strategies for Git Submodules
+
+There is no official stance on the use of [Git submodules](https://git-scm.com/docs/git-submodule) and how to apply Gitflow to Git Submodules. For a Git submodule that is only consumed, it is straight-forward to point a feature branch or develop branch to the latest version of the Git submodule, and have that pointer cascade to the releases. However if a Git Submodule is being both consumed and produced, then branching becomes trickier. From my own experience, here are my recommendations:  
+1. Don't use a master branch unless the git submodule is a versioned library consumed by other products.  
+2. There is no need to tag the parent repository versions inside of the git submodule dependency. The tagged commits in the parent repository will by nature point to the correct commits in the submodules.  
+3. Branch only when necessary; if a release is created in the parent repository, then a release branch only needs to be created in each Git submodule if changes need to be committed in the Git submodule on a release branch.  
+4. Otherwise, branching in Git submodules should mirror branching in the parent repository with one exception. Branches should be prefixed with the name of the product that created the branch. E.g. MyApp/featureX branches from develop  
+5. Share the develop branch between products, so there is no need to keep multiple develop branches in sync. Otherwise you run the risk of ending up with two versions of the same library within a single repository.  
+
 
 ###References  
 
