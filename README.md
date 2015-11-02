@@ -23,6 +23,8 @@ The Gitflow branching model was designed by [Vincent Driessen](http://nvie.com) 
 
 As the name suggests, Gitflow was created for use with the [Git source control management](https://git-scm.com) system. Gitflow could in theory be applied to most other forms of source control management. [Mercurial SCM](https://www.mercurial-scm.org) adapted an equivalent branching model called [Hg Flow](https://andy.mehalick.com/2011/12/24/an-introduction-to-hgflow/). However since Gitflow depends heavily on quick and lightweight branching so the cost of implementing Gitflow on another SCM would increase depending on how easy it is to branch.  
 
+Developers who are accustomed to having a Configuration Management team in charge of the repository and branching are likely to find Git and Gitflow daunting, in part because branching is still viewed as a cumbersome and heavy process. Git branches are simply lightweight movable pointers in the repository, and they are quick to create and quick to be destroyed with no lasting consequences on the code-base. If a developer thinks that Gitflow is thus too complicated and overkill for a project, it's likely they need more exposure to Git and Gitflow documentation.  
+
 ###Tools  
 
 As with Git, Gitflow can be implemented entirely from the command-line or via a user-interface. Here are two of the tools to bootstrap your Gitflow process.  
@@ -118,13 +120,17 @@ Both the Apple App Store and Google Play stores now use a review process to vet 
 
 ![semantic-versioning](images/semantic-versioning.png)  
 
-Semantic Versioning is an attempt to, as it's name suggests, standardize the *meaning* as well as syntax of version numbers. The [main webpage of the Semantic Versioning project](http://semver.org) declares that the goal of the project is to deal with 'dependency hell'. Indeed, Semantic Versioning is a very popular versioning convention adopted by [CocoaPods](https://github.com/mattbocosoft/presentation-cocoapods).  
+Semantic Versioning is an attempt to, as it's name suggests, standardize the *meaning* as well as syntax of version numbers. The [main webpage of the Semantic Versioning project](http://semver.org) declares that the goal of the project is to deal with 'dependency hell'. Indeed, Semantic Versioning is a very popular versioning convention adopted by [CocoaPods](https://github.com/mattbocosoft/presentation-cocoapods) and allows product developers to be able to count on the backwards-compatibility of dependency updates.  
 
 [Not everyone agrees](https://gist.github.com/jashkenas/cbd2b088e20279ae2c8e) with the practice of Semantic Versioning, arguing that Semantic Versioning "prioritize[s] a mechanistic understanding of a codebase over a human one".  
 
 There are many unique methods of assigning versions to product releases, and each organization has it's own unique style. For OS X, Apple uses a two-component version number (e.g. 10.11) combined with a natural language name (e.g. "El Capitan"). iOS on the other hand uses a system that appears to be equivalent to.
 
 Cocoapods...
+
+###Beginning Development  
+
+The initial version of a product or library using Semantic Versioning starts at 0.1.0. Since all changes are potentially break backwards-compatibility, it does make sense to increase the major version until release, so the product does not increase to 1.0.0 until the first public release.  
 
 ###Major  
 
