@@ -11,7 +11,11 @@ The project has been around since 2004 when it was developed by Sun Microsystems
 ###Jenkins Jobs  
 A 'job' in Jenkins is the basic unit of continuous integration. A job can be used to build and/or merge multiple branches simultaneously.  
 
+#####Create a job  
 ![jenkins-create-job](images/jenkins-create-job.png)  
+
+#####Configure a job  
+![jenkins-job-configuration](images/jenkins-job-configuration.png)  
 
 ###Permanent Branches  
 
