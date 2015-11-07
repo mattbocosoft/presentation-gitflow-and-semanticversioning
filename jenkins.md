@@ -4,12 +4,14 @@ Now that your project has been setup with a branching model and a versioning sys
 
 ![jenkins-logo](images/jenkins-logo.png)
 
-There are many Continuous Integration options available on the market but this presentation will focus on [Jenkins](https://jenkins-ci.org), a powerful and time-tested Continuous Integration system used heavily in the Software Engineering industry and the open-source community.  
+There are many Continuous Integration options available on the market but this presentation will focus on [Jenkins](https://jenkins-ci.org), a powerful and time-tested Continuous Integration system [very popular](https://wiki.jenkins-ci.org/pages/viewpage.action?pageId=58001258) in the Software Engineering industry and the open-source community.  
 
 The project has been around since 2004 when it was developed by Sun Microsystems under the name Hudson and by way of a trademark dispute became known to the open-source community as Jenkins. Out-of-the-box Jenkins supports Subversion and CVS, and since Jenkins is extensible, there is a plugin to add [support for Git SCM](https://wiki.jenkins-ci.org/display/JENKINS/Git+Plugin).  
 
 ###Jenkins Jobs  
-A 'job' in Jenkins is the basic unit of continuous integration. A job can be used to build and/or merge multiple branches simultaneously.
+A 'job' in Jenkins is the basic unit of continuous integration. A job can be used to build and/or merge multiple branches simultaneously.  
+
+![jenkins-create-job](images/jenkins-create-job.png)  
 
 ###Permanent Branches  
 
