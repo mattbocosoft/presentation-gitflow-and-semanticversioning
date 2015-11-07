@@ -1,4 +1,3 @@
 #Jenkins Continuous Integration  
 
-[Jenkins](https://jenkins-ci.org)  
-
+Now that your project has been setup with a branching model and a versioning system, the next topic deals with automatically building and distributing the different branches and versions to team members. The sooner that quality engineers (QA), business analysts (BA) and product managers (PM) can get their hands on the latest version of the software, the faster that developers can get feedback on their work. [Jenkins](https://jenkins-ci.org) is a powerful and time-tested [Continuous Integration](https://en.wikipedia.org/wiki/Continuous_integration) system that provides this service.  
