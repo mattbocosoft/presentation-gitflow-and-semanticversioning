@@ -27,3 +27,8 @@ Now that the first Job for the project Git repository has been configured, it is
 ####Feature  
 
 ####Hotfix  
+
+
+
+**Previous**: [Semantic Versioning](semantic-versioning.md)  
+Return to the [homepage](README.md).
