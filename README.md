@@ -23,10 +23,6 @@ The Gitflow branching model supports many aspects of Software Configuration Mana
 
 Semantic Versioning supports Change control, Release engineering (specifically the Identifiability aspect), and Deployment among other facets of Software Configuration Management.  
 
-###Use of GitFlow and Semantic Versioning in Continuous Integration  
+###Use of GitFlow and Semantic Versioning with Jenkins Continuous Integration  
 
-**Professor Anderson**  
-Due to the length of this presentation, I'm thinking of expanding it slightly using this topic, and talking GitFlow and Semantic Versioning in the context of either:
-...[Fastlane.tools](https://fastlane.tools) 
-or
-...[Jenkins](https://jenkins-ci.org)  
+Continuous Integration is a crucial aspect to Agile software development. It helps deliver code to quality engineers as soon as it happens and facilitates communication and status updates between developers and the rest of the development team.  
