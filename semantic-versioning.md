@@ -50,4 +50,5 @@ Pre-release numbers are appended after the Patch number following a dash. They c
 
 
 **Previous**: [Gitflow Branching Model](gitflow.md)  
+**Next**: [Jenkins Continuous Integration](jenkins.md)  
 Return to the [homepage](README.md).
