@@ -1,10 +1,10 @@
 #Continuous Integration for Gitflow and Semver  
 
-Now that your project has been setup with a branching model and a versioning system, the next topic deals with automatically building and distributing the different branches and versions to team members. The sooner that quality engineers (QA), business analysts (BA) and product managers (PM) can get their hands on the latest version of the software, the faster that developers can get feedback on their work.  
+Now that your project has been setup with a branching model and a versioning system, the next topic deals with automatically building and distributing the different branches and versions to team members. The sooner that quality engineers (QA), business analysts (BA) and product managers (PM) can get their hands on the latest version of the software, the faster that developers can get feedback on their work. [Continuous Integration](https://en.wikipedia.org/wiki/Continuous_integration) is a process that fulfills this need.  
 
 ![jenkins-logo](images/jenkins-logo.png)
 
-To this end, [Jenkins](https://jenkins-ci.org) is a powerful and time-tested [Continuous Integration](https://en.wikipedia.org/wiki/Continuous_integration) system that provides this service.  
+There are many Continuous Integration options available on the market but this presentation will focus on [Jenkins](https://jenkins-ci.org), a powerful and time-tested Continuous Integration system used heavily in the Software Engineering industry and the open-source community.  
 
 The project has been around since 2004 when it was developed by Sun Microsystems under the name Hudson and by way of a trademark dispute became known to the open-source community as Jenkins. Out-of-the-box Jenkins supports Subversion and CVS, and since Jenkins is extensible, there is a plugin to add [support for Git SCM](https://wiki.jenkins-ci.org/display/JENKINS/Git+Plugin).  
 
