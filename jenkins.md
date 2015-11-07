@@ -28,7 +28,9 @@ Now that the first Job for the project Git repository has been configured, it is
 
 ####Hotfix  
 
+##References  
 
+[Jenkins: An extensible open source continuous integration server]http://jenkins-ci.org)  
 
 **Previous**: [Semantic Versioning](semantic-versioning.md)  
 Return to the [homepage](README.md).
