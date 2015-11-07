@@ -25,9 +25,15 @@ Now you are ready to start creating jobs for your Gitflow branches and Semantica
 A 'job' in Jenkins is the basic unit of continuous integration. A job can be used to build and/or merge multiple branches simultaneously.  
 
 #####Create a job  
+To create a new job, click on "New Item" in the top left corner of the main Jenkins page.  
+
 ![jenkins-create-job](images/jenkins-create-job.png)  
 
 #####Configure a job  
+To configure an existing job:  
+1. Click on the job in the main job list  
+2. Click on "Configure" in the left-hand menu  
+
 ![jenkins-job-configuration](images/jenkins-job-configuration.png)  
 
 ###Gitflow: Permanent Branches  
