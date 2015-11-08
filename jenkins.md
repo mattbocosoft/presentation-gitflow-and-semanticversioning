@@ -25,7 +25,11 @@ Now you are ready to start creating jobs for your Gitflow branches and Semantica
 A 'job' in Jenkins is the basic unit of continuous integration. A job can be used to build and/or merge multiple branches simultaneously.  
 
 #####Create a job  
-To create a new job, click on "New Item" in the top left corner of the main Jenkins page.  
+To create a new job:  
+1. Click on "New Item" in the top left corner of the main Jenkins page.  
+2. Type in the job name  
+3. Select "Freestyle project"  
+4. Click 'OK'  
 
 ![jenkins-create-job](images/jenkins-create-job.png)  
 
@@ -43,7 +47,7 @@ To configure an existing job:
 ###Gitflow: Permanent Branches  
 
 ####Develop  
-The most active and important job will point to the develop branch, where most of the commits occur. This job can be used to ensure that all team members, not just developers, will have access to a build compiled from the latest cutting-edge code. A development team might use the "Poll SCM" option for this job to check for new commits to this branch every 15 minutes for example (e.g. H/15 * * * *)  
+The most active and important job will point to the develop branch, where most of the commits occur. This job can be used to ensure that all team members, not just developers, will have access to a build compiled from the latest cutting-edge code. A development team might use the "Poll SCM" option for this job to check for new commits to this branch every 15 minutes for example (e.g. H/15 * * * *). An "Email Notification" post-build action should be used to alert an offending developer of breaking the build.  
 
 Use '*/develop' as the branch name parameter on the job configuration page.  
 
@@ -52,12 +56,26 @@ In the context of iOS Development, a Job for the master branch is not entirely n
 
 ###Gitflow: Supporting Branches  
 Now that the first Job for the project Git repository has been configured, it is easy to start creating more jobs for each branch. Instead of configuring additional jobs from scratch, the first job can be cloned and modified so that we only have to modify what we need.  
+1. Click on "New Item" in the top left corner of the main Jenkins page.  
+2. Type in the job name  
+3. This time, select "Copy existing Item"  
+4. Type the name of the job pointing at the develop branch  
+5. Click 'OK'  
 
 ####Release  
+The release branch should also use the "Poll SCM" option so that any new changes will generate a new build for team members. An "Email Notification" post-build action should be used to alert an offending developer of breaking the build, and the "Send e-mail for every unstable build" option should be checked since commits to the release branch should be made with more caution.  
+
+Use '*/release-X.Y.Z' as the branch name parameter on the job configuration page.  
 
 ####Feature  
+Whereas the permanant branches (i.e. develop, master) and the release and hotfixes branches should try to maintain stability, it might be expected that feature branches contain broken or work-in-progress code. Additionally, feature branches are not normally pushed to the central repository unless the feature is on a long-running branch or there are multiple developers working on the feature. For these reasons, when a Jenkins job is justified, it's probably not necesary for Jenkins to build after every commit. Instead, builds can be kicked-off manually by clicking the "Schedule a build" button to the right of a job in the main job list page, or by using a more infrequent "Build Triggers" setting. The "Build Periodically" option will build the branch by the defined time interval. If the build fails, there is probably no need to use an "Email Notification" post-build action to alert developers of the breakage since the feature is a work-in-progress.  
+
+Use '*/<feature-name>' as the branch name parameter on the job configuration page.  
 
 ####Hotfix  
+The configuration of a hotfix Jenkins job should be almost identical to a release job. Every commit should be built, and developers should be alerted if their commits break the build.  
+
+Use '*/hotfix-X.Y.Z' as the branch name parameter on the job configuration page.  
 
 ##References  
 
