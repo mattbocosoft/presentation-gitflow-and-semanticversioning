@@ -33,13 +33,19 @@ To create a new job, click on "New Item" in the top left corner of the main Jenk
 To configure an existing job:  
 1. Click on the job in the main job list  
 2. Click on "Configure" in the left-hand menu  
+3. Click on "Git" under the 'Source Code Management' list  
+4. Type in the address of the Git repository (local or remote)  
+5. Use the 'Build Triggers' section to define how often to build the branch.  
+6. If you need help with any parameter, click the question-mark icon to the right of the field  
 
 ![jenkins-job-configuration](images/jenkins-job-configuration.png)  
 
 ###Gitflow: Permanent Branches  
 
 ####Develop  
-The most active and important job will point to the develop branch, where most of the commits occur. 
+The most active and important job will point to the develop branch, where most of the commits occur. This job can be used to ensure that all team members, not just developers, will have access to a build compiled from the latest cutting-edge code. A development team might use the "Poll SCM" option for this job to check for new commits to this branch every 15 minutes for example (e.g. H/15 * * * *)  
+
+Use '*/develop' as the branch name parameter on the job configuration page.  
 
 ####Master  
 In the context of iOS Development, a Job for the master branch is not entirely necessary. This is because a release build needs to be submitted for App Store Review *and* approved before the release branch is merged into master. By the time that a Master job builds the lastest commit, the release build is already being used by customers. However, it may also be good practice to perform sanity checks to confirm that what the release branch merge-commit on the master branch contains is indeed what has been released to the App Store.  
