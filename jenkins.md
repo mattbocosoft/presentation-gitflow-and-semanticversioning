@@ -84,6 +84,16 @@ Use '*/<feature-name>' as the branch name parameter on the job configuration pag
 
 Use the branch **name** ($GIT_BRANCH) as the 'Marketing Version' and jenkins will take care of incrementing the Technical Version (build number) to distinguish between builds on the same branch.  
 
+##Last Thoughts  
+
+If you want to save time by reusing jobs, you can use wildcards for the branch names in the job configurations.  
+
+'*/feature-*'  
+'*/release-*'  
+'*/hotfix-*'  
+
+Jenkins has a wide-array of powerful features that go beyond the scope of this presentation. Exploration of available plugins and the advanced features can help speed-up your workflow and save countless hours of work that would normally be associated with build logistics. If you are part of a traditional software shop with access to a team of configuration management engineers, Jenkins offers you all the power and ease of build management without the need outsource.  
+
 ##References  
 
 [Jenkins: An extensible open source continuous integration server]http://jenkins-ci.org)  
