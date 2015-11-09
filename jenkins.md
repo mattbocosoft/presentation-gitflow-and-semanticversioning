@@ -96,7 +96,7 @@ Jenkins has a wide-array of powerful features that go beyond the scope of this p
 
 ##References  
 
-[Jenkins: An extensible open source continuous integration server]http://jenkins-ci.org)  
+[Jenkins: An extensible open source continuous integration server](http://jenkins-ci.org)  
 
 **Previous**: [Semantic Versioning](semantic-versioning.md)  
 Return to the [homepage](README.md).
