@@ -14,7 +14,7 @@ There are many alternative methods of assigning versions to product releases, an
 
 ##Internal Versioning
 
-Semantic Versioning is intented to be used for the release version of a product or library. This is the version that the user or consumer of the product sees, and it also often called the marketing version. Internal versions should adopt a different pattern; here is my recommendation based off of my experience and assuming the use of the Gitflow branching model.  
+Semantic Versioning is intended to be used for the release version of a product or library. This is the version that the user or consumer of the product sees, and it also often called the marketing version. Internal versions should adopt a different pattern; here is my recommendation based off of my own experience assuming the use of the Gitflow branching model.  
 
 1. Release branches should declare a specific semantic version since they are candidates for release. The version can be incremented if a hotfix is required before the release is deployed. Use a build number suffix to distinguish between commits, for example: X.Y.Z (build-number)  
 2. Hotfix branches are the same as release branches in that they should use a declared semantic version. Use a build number suffix to distinguish between commits, for example: X.Y.Z (build-number)  
