@@ -6,11 +6,11 @@ Semantic Versioning is an attempt to, as it's name suggests, standardize the *me
 
 Semantic Versioning formalizes the versioning system that many products already use in an informal way. Organizations often increment the major number when the change 'feels' big, or the minor number when the change 'feels' minor, however this methodology is not exact; "Without compliance to some sort of formal specification, version numbers are essentially useless for dependency management". [Not everyone agrees](https://gist.github.com/jashkenas/cbd2b088e20279ae2c8e) with the practice of Semantic Versioning, arguing that Semantic Versioning "prioritize[s] a mechanistic understanding of a codebase over a human one".  
 
-There are many unique methods of assigning versions to product releases, and each organization has it's own unique style. Here are some example  
-1. OS X: Apple uses a two-component version number (e.g. 10.11) combined with a natural language name (e.g. "El Capitan").  
-2. iOS uses a three-component version number much like Semantic Versioning, and may in fact be *using* Semantic Versioning    
-3. Android uses [three different versions](https://en.wikipedia.org/wiki/Android_version_history) for each release, e.g. 4.4–4.4.4 Android KitKat (API level 19)  
-4. Some organizations use version numbers based on *when* the version was released. For example, if the product update was released in the 4th financial quarter of 2016, then the version would be 2016.4  
+There are many unique methods of assigning versions to product releases, and each organization has it's own unique style. some examples are:
+* OS X: Apple uses a two-component version number (e.g. 10.11) combined with a natural language name (e.g. "El Capitan").  
+* iOS uses a three-component version number much like Semantic Versioning, and may in fact be *using* Semantic Versioning    
+* Android uses [three different versions](https://en.wikipedia.org/wiki/Android_version_history) for each release, e.g. 4.4–4.4.4 Android KitKat (API level 19)  
+* Some organizations use version numbers based on *when* the version was released. For example, if the product update was released in the 4th financial quarter of 2016, then the version would be 2016.4  
 
 ##Internal Versioning
 
