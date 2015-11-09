@@ -23,7 +23,7 @@ Semantic Versioning is intended to be used for the release version of a product 
 
 ##Initial Development  
 
-The initial version of a product or library using Semantic Versioning starts at 0.1.0. Since all changes are potentially break backwards-compatibility, it does make sense to increase the major version until release, so the product does not increase to 1.0.0 until the first public release. If the software is already in use, then the version number should already be at or above 1.0.0  
+The initial version of a product or library using Semantic Versioning starts at 0.1.0. Since all changes are potentially break backwards-compatibility, it does not make sense to increment the *major* version to 1.0.0 until the first release. If the software is already in use, then the version number should already be at or above 1.0.0.  
 
 ##Major Version  
 The Major number should be incremented when backward-*incompatible* functionality is introduced in the release. This indicates to the consumers of the software or library that they need to be prepared to change their integration methods with the software or library.  
