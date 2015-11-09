@@ -6,7 +6,7 @@ Semantic Versioning is an attempt to, as it's name suggests, standardize the *me
 
 Semantic Versioning formalizes the versioning system that many products already use in an informal way. Organizations often increment the major number when the change 'feels' big, or the minor number when the change 'feels' minor, however this methodology is not exact; "Without compliance to some sort of formal specification, version numbers are essentially useless for dependency management". However [not everyone agrees](https://gist.github.com/jashkenas/cbd2b088e20279ae2c8e) with the practice of Semantic Versioning, arguing that Semantic Versioning "prioritize[s] a mechanistic understanding of a codebase over a human one".  
 
-There are many unique methods of assigning versions to product releases, and each organization has it's own unique style. Some examples are:
+There are many alternative methods of assigning versions to product releases, and each organization has it's own unique style. Some examples are:
 * OS X: Apple uses a two-component version number (e.g. 10.11) combined with a natural language name (e.g. "El Capitan").  
 * iOS uses a three-component version number much like Semantic Versioning, and may in fact be *using* Semantic Versioning    
 * Android uses [three different versions](https://en.wikipedia.org/wiki/Android_version_history) for each release, e.g. 4.4–4.4.4 Android KitKat (API level 19)  
